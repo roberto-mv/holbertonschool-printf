@@ -1,5 +1,5 @@
 #ifndef main.h
-#define mai_h
+#define main_h
 
 #include <limits.h>
 #include <stdarg.h>
