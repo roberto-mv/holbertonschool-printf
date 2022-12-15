@@ -1,8 +1,3 @@
-/*
- * File: memory_h.c
- * Auth: Diego Alvarado
- */
-
 #include "main.h"
 
 unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
