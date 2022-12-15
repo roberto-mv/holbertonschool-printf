@@ -1,8 +1,3 @@
-/*
- * File: modi.c
- * Auth: Diego Alavarado
- */
-
 #include "main.h"
 
 unsigned int print_width(buffer_t *output, unsigned int printed,
