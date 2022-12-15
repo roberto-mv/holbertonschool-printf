@@ -7,6 +7,34 @@ It is necessary to #include "main.h" header to use the function.
 To demonstrate _printf, the example below is used. It is a main function
 contained in the file "main.c", located in the test directory that uses
 both "_printf" and "printf" to print to the stdout.
+
+.SH DESCRIPTION
+The _printf() function produces output according to a format which is further described
+below. This function write its output to the stdout, the standard output stream.
+
+.SH USAGE
+The following key characters preceeded by % symbol called specifiers are needed to use _printf.
+
+.RS 0
+%c: If no l modifier is present, the int argument is converted to an unsigned char, and the resulting character is written.  If an l modifier is present, the wint_t (wide character) argument is converted to a multibyte sequence by a call to the wcrtomb(3) function, with a conversion state starting in the initial state, and the resulting multibyte string is written.
+
+.RS 0
+%s: If no l modifier is present: the const char * argument is expected to be a pointer to an array of character type (pointer to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0'); if a precision is specified, no more than the number specified are written.  If a precision is given, nonull byte need be present; if the precision is not specified, or is greater than the size of the array, the array must contain a terminating null byte.
+
+.RS 0
+%%: A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
+
+.RS 0
+%i: Prints integers of max and min size of an int type
+
+.RS 0
+%d: Prints integers of max and min size of an int type
+
+.SH RETURN VALUES
+Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
+
+.SH EXAMPLE
+
 The command "gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c" should be used to compile.
 The main.c file should be in the same directory as _printf and its other supporting functions
 before compiling. The example is as follows;
@@ -62,32 +90,6 @@ Percent:[%]
 Percent:[%]
 Len:[12]
 Len:[12]
-
-.SH DESCRIPTION
-The _printf() function produces output according to a format which is further described
-below. This function write its output to the stdout, the standard output stream.
-
-.SH USAGE
-The following key characters preceeded by % symbol called specifiers are needed to use _printf.
-
-.RS 0
-%c: If no l modifier is present, the int argument is converted to an unsigned char, and the resulting character is written.  If an l modifier is present, the wint_t (wide character) argument is converted to a multibyte sequence by a call to the wcrtomb(3) function, with a conversion state starting in the initial state, and the resulting multibyte string is written.
-
-.RS 0
-%s: If no l modifier is present: the const char * argument is expected to be a pointer to an array of character type (pointer to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0'); if a precision is specified, no more than the number specified are written.  If a precision is given, nonull byte need be present; if the precision is not specified, or is greater than the size of the array, the array must contain a terminating null byte.
-
-.RS 0
-%%: A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
-
-.RS 0
-%i: Prints integers of max and min size of an int type
-
-.RS 0
-%d: Prints integers of max and min size of an int type
-
-.SH RETURN VALUES
-The _printf() function returns an integer representing the number of symbols
-printed not counting \\0 (NULL) for the string.
 
 .SH SEE ALSO
 .I printf(3)
