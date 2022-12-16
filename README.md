@@ -24,7 +24,6 @@ The next chart explains the detailed functionality of the parameters that the fu
 %X : Hexadecimal notation (using uppercase letters A-F).
 %c : Convert an int to an unsigned character and print the resulting character.
 %s : Print a string pointed to by a char *.
-%p : Print a void * argument in hexadecimal (ANSI C only).
 %% : Print a single % character.
 ```
 
